@@ -5,13 +5,13 @@
 - https://pypi.org/project/djangorestframework/
 
 
-- Create directory "app": 
-mkdir app
+- Create directory "app": <br />
+mkdir app <br />
 
-- Create a Docker image: 
-docker build .
+- Create a Docker image: <br />
+docker build . <br />
 
-- Build a Docker image using "docker-compose": 
-docker-compose build 
-docker-compose run app 
+- Build a Docker image using "docker-compose": <br />
+docker-compose build <br />
+docker-compose run app <br />
 
