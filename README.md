@@ -2,16 +2,26 @@
 
 **Releases:** 
 - https://pypi.org/project/Django/
-- https://pypi.org/project/djangorestframework/
 
+- SOURCE: https://docs.docker.com/compose/django/
 
-- Create directory "app": <br />
-mkdir app <br />
+- **Create the Django project:** <br />
+docker-compose run web django-admin startproject composeexample . <br />
 
-- Create a Docker image: <br />
-docker build . <br />
+- **Edit** the *composeexample/settings.py* file: <br />
 
-- Build a Docker image using "docker-compose": <br />
-docker-compose build <br />
-docker-compose run app <br />
+```
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': 'db',
+        'PORT': 5432,
+    }
+}
+```
 
+- **Run**: <br />
+docker-compose up <br />
